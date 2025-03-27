@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudanva | Vision Board</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="index.html">Sudanva</a></h1>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="playground.html">Playground</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="vision" class="fade-in">
+        <h2>Vision Board</h2>
+        <p>My roadmap to greatness—dreams, inspirations, and the future I’m building.</p>
+        <div class="vision-grid">
+            <div class="vision-item">
+                <div class="front">
+                    <h3>Full-Stack Mastery</h3>
+                </div>
+                <div class="back">
+                    <p>Launch a full-stack app by 2026—front to back, unstoppable.</p>
+                </div>
+            </div>
+            <div class="vision-item">
+                <div class="front">
+                    <h3>3D Design</h3>
+                </div>
+                <div class="back">
+                    <p>Master 3D modeling for next-level UI/UX.</p>
+                </div>
+            </div>
+            <div class="vision-item">
+                <div class="front">
+                    <h3>AI Tool</h3>
+                </div>
+                <div class="back">
+                    <p>Build an AI-powered app that changes the game.</p>
+                </div>
+            </div>
+            <div class="vision-item">
+                <div class="front">
+                    <h3>Inspiration: Minimalism</h3>
+                </div>
+                <div class="back">
+                    <p>Clean, bold designs drive my work—less is more.</p>
+                </div>
+            </div>
+        </div>
+        <a href="index.html" class="back-link">Back to Home</a>
+    </section>
+
+    <footer>
+        <p>© 2025 Sudanva Shilannavar</p>
+    </footer>
+
+    <script>
+        // Simple particle effect (optional)
+        const canvas = document.createElement('canvas');
+        document.body.appendChild(canvas);
+        canvas.style.position = 'fixed';
+        canvas.style.top = '0';
+        canvas.style.left = '0';
+        canvas.style.zIndex = '-1';
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        for (let i = 0; i < 50; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.random() * 2 + 1,
+                speed: Math.random() * 0.5 + 0.1
+            });
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = '#3B82F6';
+                ctx.fill();
+                p.y -= p.speed;
+                if (p.y < 0) p.y = canvas.height;
+            });
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+</html>
