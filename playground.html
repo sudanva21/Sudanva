@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudanva | Code Playground</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="index.html">Sudanva</a></h1>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="playground.html">Playground</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="playground" class="fade-in">
+        <h2>Code Playground</h2>
+        <p>Unleash my coding power—interact with these live demos.</p>
+        <div class="playground-container">
+            <!-- Existing Demos -->
+            <div class="playground-item" id="color-changer">
+                <h3>Color Changer</h3>
+                <div class="code-display">
+                    <pre>function changeColor() {
+    document.getElementById('colorBox').style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+}</pre>
+                </div>
+                <div class="output">
+                    <div id="colorBox" class="color-box"></div>
+                    <button onclick="changeColor()">Change Color</button>
+                </div>
+            </div>
+            <div class="playground-item" id="text-animator">
+                <h3>Text Animator</h3>
+                <div class="code-display">
+                    <pre>document.getElementById('textInput').addEventListener('input', function() {
+    let text = this.value;
+    document.getElementById('outputText').innerText = text;
+    document.getElementById('outputText').classList.add('bounce');
+});</pre>
+                </div>
+                <div class="output">
+                    <input id="textInput" placeholder="Type here">
+                    <p id="outputText"></p>
+                </div>
+            </div>
+            <div class="playground-item" id="calculator">
+                <h3>Simple Calculator</h3>
+                <div class="code-display">
+                    <pre>function calculate() {
+    let num1 = Number(document.getElementById('num1').value);
+    let num2 = Number(document.getElementById('num2').value);
+    document.getElementById('calcResult').innerText = num1 + num2;
+}</pre>
+                </div>
+                <div class="output">
+                    <input id="num1" type="number" placeholder="Num 1">
+                    <input id="num2" type="number" placeholder="Num 2">
+                    <button onclick="calculate()">Add</button>
+                    <p id="calcResult"></p>
+                </div>
+            </div>
+            <div class="playground-item" id="pattern-generator">
+                <h3>Pattern Generator</h3>
+                <div class="code-display">
+                    <pre>function generatePattern() {
+    let ctx = document.getElementById('patternCanvas').getContext('2d');
+    ctx.clearRect(0, 0, 200, 200);
+    for (let i = 0; i < 10; i++) {
+        ctx.fillStyle = '#' + Math.floor(Math.random()*16777215).toString(16);
+        ctx.fillRect(i * 20, i * 20, 20, 20);
+    }
+}</pre>
+                </div>
+                <div class="output">
+                    <canvas id="patternCanvas" width="200" height="200"></canvas>
+                    <button onclick="generatePattern()">Generate</button>
+                </div>
+            </div>
+            <!-- New Python-Inspired Demos -->
+            <div class="playground-item" id="fizzbuzz">
+                <h3>FizzBuzz (Python Style)</h3>
+                <div class="code-display">
+                    <pre># Python: for i in range(1, n+1):
+#     print("FizzBuzz" if i % 15 == 0 else "Fizz" if i % 3 == 0 else "Buzz" if i % 5 == 0 else i)
+function fizzBuzz() {
+    let n = Number(document.getElementById('fizzInput').value);
+    let result = '';
+    for (let i = 1; i <= n; i++) {
+        result += (i % 15 === 0 ? 'FizzBuzz' : i % 3 === 0 ? 'Fizz' : i % 5 === 0 ? 'Buzz' : i) + '<br>';
+    }
+    document.getElementById('fizzResult').innerHTML = result;
+}</pre>
+                </div>
+                <div class="output">
+                    <input id="fizzInput" type="number" placeholder="Enter a number" min="1">
+                    <button onclick="fizzBuzz()">Run</button>
+                    <div id="fizzResult"></div>
+                </div>
+            </div>
+            <div class="playground-item" id="prime-checker">
+                <h3>Prime Checker (Python Style)</h3>
+                <div class="code-display">
+                    <pre># Python: def is_prime(n):
+#     if n < 2: return False
+#     for i in range(2, int(n ** 0.5) + 1):
+#         if n % i == 0: return False
+#     return True
+function checkPrime() {
+    let n = Number(document.getElementById('primeInput').value);
+    let isPrime = n >= 2;
+    for (let i = 2; i <= Math.sqrt(n) && isPrime; i++) {
+        if (n % i === 0) isPrime = false;
+    }
+    document.getElementById('primeResult').innerText = isPrime ? `${n} is prime!` : `${n} is not prime.`;
+}</pre>
+                </div>
+                <div class="output">
+                    <input id="primeInput" type="number" placeholder="Enter a number" min="1">
+                    <button onclick="checkPrime()">Check</button>
+                    <p id="primeResult"></p>
+                </div>
+            </div>
+            <!-- New C-Inspired Demo -->
+            <div class="playground-item" id="memory-game">
+                <h3>Memory Game (C Style)</h3>
+                <div class="code-display">
+                    <pre>// C: int arr[4]; // Manual memory allocation
+// Simulate memory with an array and random values
+function startMemoryGame() {
+    let sequence = Array(4).fill().map(() => Math.floor(Math.random() * 4) + 1);
+    let display = document.getElementById('memoryDisplay');
+    display.innerHTML = sequence.join(' ') + '<br>Memorize this!';
+    setTimeout(() => {
+        display.innerText = 'Guess the sequence!';
+        document.getElementById('memoryInput').style.display = 'block';
+        document.getElementById('memorySubmit').style.display = 'block';
+        window.currentSequence = sequence;
+    }, 2000);
+}
+function checkMemory() {
+    let guess = document.getElementById('memoryInput').value.split(' ').map(Number);
+    let result = guess.join('') === window.currentSequence.join('') ? 'Correct!' : 'Wrong!';
+    document.getElementById('memoryResult').innerText = result;
+}</pre>
+                </div>
+                <div class="output">
+                    <div id="memoryDisplay"></div>
+                    <input id="memoryInput" placeholder="Enter 4 numbers (e.g., 1 2 3 4)" style="display: none;">
+                    <button id="memorySubmit" onclick="checkMemory()" style="display: none;">Submit</button>
+                    <p id="memoryResult"></p>
+                    <button onclick="startMemoryGame()">Start Game</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Sudanva Shilannavar</p>
+    </footer>
+
+    <script>
+        function changeColor() {
+            document.getElementById('colorBox').style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        }
+
+        document.getElementById('textInput').addEventListener('input', function() {
+            let text = this.value;
+            let output = document.getElementById('outputText');
+            output.innerText = text;
+            output.classList.add('bounce');
+            setTimeout(() => output.classList.remove('bounce'), 1000);
+        });
+
+        function calculate() {
+            let num1 = Number(document.getElementById('num1').value);
+            let num2 = Number(document.getElementById('num2').value);
+            document.getElementById('calcResult').innerText = `Result: ${num1 + num2}`;
+        }
+
+        function generatePattern() {
+            let canvas = document.getElementById('patternCanvas');
+            let ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < 10; i++) {
+                ctx.fillStyle = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                ctx.fillRect(i * 20, i * 20, 20, 20);
+            }
+        }
+
+        function fizzBuzz() {
+            let n = Number(document.getElementById('fizzInput').value);
+            let result = '';
+            for (let i = 1; i <= n && i <= 20; i++) { // Cap at 20 for display
+                result += (i % 15 === 0 ? 'FizzBuzz' : i % 3 === 0 ? 'Fizz' : i % 5 === 0 ? 'Buzz' : i) + '<br>';
+            }
+            document.getElementById('fizzResult').innerHTML = result || 'Enter a number!';
+        }
+
+        function checkPrime() {
+            let n = Number(document.getElementById('primeInput').value);
+            let isPrime = n >= 2;
+            for (let i = 2; i <= Math.sqrt(n) && isPrime; i++) {
+                if (n % i === 0) isPrime = false;
+            }
+            document.getElementById('primeResult').innerText = n ? (isPrime ? `${n} is prime!` : `${n} is not prime.`) : 'Enter a number!';
+        }
+
+        function startMemoryGame() {
+            let sequence = Array(4).fill().map(() => Math.floor(Math.random() * 4) + 1);
+            let display = document.getElementById('memoryDisplay');
+            display.innerHTML = sequence.join(' ') + '<br>Memorize this!';
+            setTimeout(() => {
+                display.innerText = 'Guess the sequence!';
+                document.getElementById('memoryInput').style.display = 'block';
+                document.getElementById('memorySubmit').style.display = 'block';
+                window.currentSequence = sequence;
+            }, 2000);
+        }
+
+        function checkMemory() {
+            let guess = document.getElementById('memoryInput').value.split(' ').map(Number);
+            let result = guess.join('') === window.currentSequence.join('') ? 'Correct!' : 'Wrong!';
+            document.getElementById('memoryResult').innerText = result;
+        }
+    </script>
+</body>
+</html>
