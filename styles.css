@@ -685,7 +685,7 @@ section {
     }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 770px) {
     .nav-links {
         display: none;
     }
