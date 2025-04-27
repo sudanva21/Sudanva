@@ -1,212 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudanva Shilannavar | Web Developer & Designer Portfolio</title>
-    <meta name="description" content="Sudanva Shilannavar’s portfolio showcasing web development, graphic design, and coding projects like Netflix Clone. Contact me for collaborations!">
-    <meta name="keywords" content="Sudanva Shilannavar, web developer, graphic designer, portfolio, HTML, CSS, JavaScript, Python, C, UI design">
-    <meta name="author" content="Sudanva Shilannavar">
-    <meta name="robots" content="index, follow">
+    <title>Sudanva Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
-<body>
+<body class="dark-mode">
+    <!-- 3D Background -->
+    <div id="three-container"></div>
+    
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
     <header>
-        <nav>
-            <h1>Sudanva</h1>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="playground.html">Playground</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">Sudanva</a>
+            </div>
+            <div class="nav-container">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
     </header>
-    <main
-        ><section id="home" class="hero">
-        <div class="hero-content">
-            <h2>Hey, I’m Sudanva</h2>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Hi, I'm <span class="highlight">Sudanva</span></h1>
+            <h2>Frontend Developer & Graphic Designer</h2>
             <p>Leader | Master of My Path | Unstoppable</p>
-            <img src="profile.png" alt="Sudanva Shilannavar profile avatar" class="avatar" loading="lazy">
+            <div class="hero-cta">
+                <a href="#projects" class="btn primary-btn">View Projects</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://github.com/sudanva21" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sudanva-shilannavar-1449a5335/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/Sudanva999" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+            <img src="https://sudanva.netlify.app/profile.png" alt="Sudanva Profile">
         </div>
     </section>
 
-    <section id="about" class="fade-in">
-        <h2>About Me</h2>
-        <p>Hi, I'm Sudanva—a Graphic Designer and Social Media Manager at Akadmix, with a passion for creative design. As a freelancer, I’m also deeply interested in Web Designing and Development.</p>
-        <ul class="skills">
-            <li>Front-end Coding</li>
-            <li>Front-End Development</li>
-            <li>Presentation</li>
-            <li>Python (Programming Language)</li>
-            <li>C (Programming Language)</li>
-            <li>Microsoft Visual Studio Code</li>
-            <li>Figma</li>
-            <li>User Interface Design</li>
-            <li>Logo Design</li>
-            <li>Microsoft Excel</li>
-            <li>Web Designer</li>
-            <li>ChatGPT</li>
-            <li>Graphic Designer</li>
-            <li>Web Developer</li>
-            <li>Social Media Management</li>
-            <li>SEO</li>
-        </ul>
-    </section>
-
-    <section id="skills" class="fade-in">
-        <h2>Skills Showcase</h2>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <h3>Front-End Development</h3>
-                <p>Crafting responsive, bold interfaces.</p>
-            </div>
-            <div class="skill-item">
-                <h3>Web Designing</h3>
-                <p>Creating sleek, user-focused designs that stand out.</p>
-            </div>
-            <div class="skill-item">
-                <h3>Graphic Designing</h3>
-                <p>Building bold visuals and logos with precision.</p>
-            </div>
-            <div class="skill-item">
-                <h3>WordPress</h3>
-                <p>Mastering customizable, powerful websites with ease.</p>
-            </div>
-            <div class="skill-item">
-                <h3>Web Development</h3>
-                <p>Engineering robust, dynamic sites from scratch.</p>
-            </div>
-            <div class="skill-item">
-                <h3>Social Media Management</h3>
-                <p>Driving engagement and growth with strategic flair.</p>
-            </div>
-            <div class="skill-item">
-                <h3>C++</h3>
-                <p>Coding efficient, high-performance solutions.</p>
-            </div>
-            <div class="skill-item">
-                <h3>C Language</h3>
-                <p>Laying the foundation with low-level mastery.</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header" data-aos="fade-up">
+            <h2>About Me</h2>
+            <div class="underline"></div>
+        </div>
+        
+            <div class="about-text" data-aos="fade-left">
+                <h3>Frontend Developer & UI Designer</h3>
+                <p>I'm a passionate frontend developer with a strong focus on creating clean, efficient, and user-friendly websites. I specialize in HTML, CSS, and JavaScript, and I'm constantly learning new technologies to stay ahead in this rapidly evolving field.</p>
+                <p>With a keen eye for design and a commitment to writing clean code, I strive to create websites that not only look great but also perform exceptionally well across all devices.</p>
+                <div class="about-details">
+                    <div class="detail">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <h4>Name</h4>
+                            <p>Sudanva Shilannavar</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>sudanva7@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Goakak, Belgaum, Karnataka, India</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <h4>Education</h4>
+                            <p>BCA(Bachloer Computer Applications)</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn primary-btn">Download CV</a>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="fade-in">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project-item">
-                <h3>My Personal Blog</h3>
-                <p>A dynamic blog built with HTML and CSS, where I share insights on tech, coding, and life. This project highlights my ability to create clean, responsive layouts and engaging content.</p>
-                <div class="project-links">
-                    <a href="#" target="_blank" class="details">Check it out</a>
-                    <a href="#" target="_blank" class="preview">Preview</a>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-header" data-aos="fade-up">
+            <h2>My Skills</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="skills-content">
+            <div class="skill-category" data-aos="fade-up">
+                <h3>Frontend Development</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h4>HTML5</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 100%;"></div>
+                        </div>
+                        <span class="skill-percentage">100%</span>
+                    </div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="skill-icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <h4>CSS3</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 100%;"></div>
+                        </div>
+                        <span class="skill-percentage">100%</span>
+                    </div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="skill-icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h4>JavaScript</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h4>React</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                        <span class="skill-percentage">80%</span>
+                    </div>
                 </div>
             </div>
-            <div class="project-item">
-                <h3>Netflix Clone</h3>
-                <p>A sleek front-end replica of Netflix, crafted with HTML, CSS, and JavaScript. This project showcases my skills in responsive design, dynamic content rendering, and interactive UI, mimicking the streaming giant’s look and feel.</p>
-                <div class="project-links">
-                    <a href="https://github.com/sudanva21/Netflix.git" target="_blank" class="details">Details</a>
-                    <a href="https://legendsnet8055.netlify.app/" target="_blank" class="preview">Preview</a>
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                <h3>Design & Tools</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="skill-icon">
+                            <i class="fab fa-figma"></i>
+                        </div>
+                        <h4>Figma</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 99%;"></div>
+                        </div>
+                        <span class="skill-percentage">99%</span>
+                    </div>
+
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="skill-icon">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <h4>Git</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="skill-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Responsive Design</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="skill-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4>Canva</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 100%;"></div>
+                        </div>
+                        <span class="skill-percentage">100%</span>
+                    </div>
+
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="skill-icon">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <h4>Content Writing</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 100%;"></div>
+                        </div>
+                        <span class="skill-percentage">100%</span>
+                    </div>
+
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="500">
+                        <div class="skill-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h4>Social Media Management</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 100%;"></div>
+                        </div>
+                        <span class="skill-percentage">100%</span>
+                    </div>
                 </div>
             </div>
-            <div class="project-item">
-                <h3>NexLogin</h3>
-                <p>A stylish sign-up and sign-in page with a 3D flip effect, powered by Firebase for secure authentication and data storage, featuring a dark, neumorphic design.</p>
-                <div class="project-links">
-                    <a href="https://github.com/sudanva21/NexLogin.git" target="_blank" class="details">Details</a>
-                    <a href="https://nexlogin.netlify.app/" target="_blank" class="preview">Preview</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-header" data-aos="fade-up">
+            <h2>My Projects</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="projects-grid">
+            <div class="project-item" data-aos="fade-up">
+                <div class="project-image">
+                    <img src="https://sudanva.netlify.app/profile.png" alt="My Personal Blog">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-link"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>My Personal Blog</h3>
+                    <p>A dynamic blog built with HTML and CSS, where I share insights on tech, coding, and life.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-image">
+                    <img src="data:image/png;base64,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" alt="Netflix Clone">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://legendsnet8055.netlify.app/" target="_blank"><i class="fas fa-link"></i></a>
+                            <a href="https://github.com/sudanva21/Netflix.git" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Netflix Clone</h3>
+                    <p>A sleek front-end replica of Netflix, crafted with HTML, CSS, and JavaScript.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image">
+                    <img src="https://sudanva.netlify.app/profile.png" alt="NexLogin">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://nexlogin.netlify.app/" target="_blank"><i class="fas fa-link"></i></a>
+                            <a href="https://github.com/sudanva21/NexLogin.git" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>NexLogin</h3>
+                    <p>A stylish sign-up and sign-in page with a 3D flip effect, powered by Firebase for secure authentication.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Firebase</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="timeline" class="fade-in">
-        <h2>My Journey</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>2020</h3>
-                <p>Mastered HTML, CSS, and JavaScript, leveling up from basics to professional-grade skills with relentless drive.</p>
-            </div>
-            <div class="timeline-item">
-                <h3>2023</h3>
-                <p>Mastered Python and C, unlocking powerful programming skills for efficient, high-performance solutions.</p>
-            </div>
-            <div class="timeline-item">
-                <h3>2024</h3>
-                <p>Built Netflix Clone with HTML, CSS, JS.</p>
-            </div>
-            <div class="timeline-item">
-                <h3>2024</h3>
-                <p>Mastered UI Design with Figma.</p>
-            </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Contact Me</h2>
+            <div class="underline"></div>
         </div>
-        <div class="timeline-item">
-            <h3>2025</h3>
-            <p>Check out my <a href="vision.html">Vision Board</a> for what’s next.</p>
-        </div>
-    </section>
-
-    <section id="blog" class="fade-in">
-        <h2>Blog Highlights</h2>
-        <div class="blog-grid">
-            <div class="blog-item">
-                <h3>Why I Code Every Day</h3>
-                <p>Coding is my grind—here’s how daily practice fuels my success.</p>
-                <a href="#" target="_blank" class="read-more">Read More</a>
+        <div class="contact-content">
+            <div class="contact-info" data-aos="fade-right">
+                <h3>Let's Connect</h3>
+                <p>Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@sudanva.dev</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 72046 86919</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Goakak, Belgaum, Karnataka, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="https://github.com/sudanva21" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sudanva-shilannavar-1449a5335/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/Sudanva999" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/sudanva20" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
-            <div class="blog-item">
-                <h3>Building the Netflix Clone</h3>
-                <p>A deep dive into crafting a sleek streaming UI with HTML, CSS, and JS.</p>
-                <a href="#" target="_blank" class="read-more">Read More</a>
-            </div>
-            <div class="blog-item">
-                <h3>Mastering UI Design</h3>
-                <p>Lessons from Figma that leveled up my design game.</p>
-                <a href="#" target="_blank" class="read-more">Read More</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="favorites" class="fade-in">
-        <h2>Favorites</h2>
-        <p>Some things I love:</p>
-        <ul class="favorites-list">
-            <li><strong>Book:</strong> Bhagavad Gita</li>
-            <li><strong>Movie:</strong> Interstellar</li>
-            <li><strong>Music:</strong> Yenagali (Song by Sonu Nigam)</li>
-            <li><strong>Hobby:</strong> Collecting and Connecting undefined mysterious beyond the imagination and world</li>
-            <li><strong>Indoor Game:</strong> Chess</li>
-            <li><strong>Outdoor Game:</strong> Cricket and Shuttle Badminton</li>
-            <li><strong>Other:</strong> Singing, Content Writting, Dancing, Instrumental(piano/keyboard), Photography, Debate</li>
-        </ul>
-    </section>
-
-    <section id="cta" class="fade-in">
-        <h2>Ready to Collaborate?</h2>
-        <p>Let’s build something great together.</p>
-        <a href="contact-form.html" class="cta-button">Message Me</a>
-    </section>
-
-    <section id="contact" class="fade-in">
-        <h2>Contact Me</h2>
-        <div class="contact-container">
-            <div class="contact-left">
-                <p>Email: <a href="sudanva7@gmail.com">sudanva7@gmail.com</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/sudanva-shilannavar-1449a5335/" target="_blank">@Sudanva-Shilannavar</a></p>
-                <p>Freelancer: <a href="#">Sudanva2</a></p>
-            </div>
-            <div class="contact-right">
-                <p>Phone: <a href="tel:+917204686919">+91 72046 86919</a></p>
-                <p>X: <a href="https://x.com/Sudanva999" target="_blank">@SudanvaShilannavar</a></p>
-                <p>Instagram: <a href="https://instagram.com/sudanav2" target="_blank">@Sudanva2</a></p>
+            <div class="contact-form" data-aos="fade-left">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
-<main>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Sudanva Shilannavar | <a href="vision.html">See My Vision</a></p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Sudanva</h3>
+                <p>Frontend Developer & Graphic Designer</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Connect With Me</h4>
+                <div class="social-icons">
+                    <a href="https://github.com/sudanva21" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sudanva-shilannavar-1449a5335/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#https://x.com/Sudanva999" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/sudanva20" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Sudanva | All Rights Reserved</p>
+        </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
